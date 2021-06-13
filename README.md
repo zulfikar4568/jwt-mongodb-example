@@ -18,3 +18,38 @@ $ npm start
 Open in http://localhost:3000
 
 Enjoyy!!!
+
+## 5. How to use?
+
+### API
+Please use postman or anything to request
+
+* Register account in http://localhost:3000/api/user/register with method POST
+```
+{
+    "name": "zulfikar",
+    "email": "isnaen7ds0@gmail.com",
+    "password": "@Is123"
+}
+```
+* Login http://localhost:3000/api/user/login with method POST
+```
+{
+    "email": "isnaen70@gmail.com",
+    "password": "@Is123"
+}
+```
+and you will receive a token for example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGM0ODczMmNkMzA0NzNlNDc3Y2E2NzIiLCJpYXQiOjE2MjM0OTYwNjMsImV4cCI6MTYyMzQ5NjE4M30.89_326sTkmFnfJScvT1tCbaaAhPDPWC4UQ0apMgnNBE
+
+* And access fake posts with http://localhost:3000/api/posts with method GET
+change headers to 'auth-token' eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGM0ODczMmNkMzA0NzNlNDc3Y2E2NzIiLCJpYXQiOjE2MjM0OTYwNjMsImV4cCI6MTYyMzQ5NjE4M30.89_326sTkmFnfJScvT1tCbaaAhPDPWC4UQ0apMgnNBE
+
+and you will get response post for example
+```
+{
+    post: {
+            title: 'my first post', 
+            description: 'random description'
+          }
+}
+```
